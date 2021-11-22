@@ -10,8 +10,8 @@ $Soft-Red: hsl(0, 93%, 68%);
 $Dark-Grayish-Red: hsl(0, 6%, 24%);
 
 //Gradients
-$first-gradient: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
-$second-gradient: Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+$first-gradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$second-gradient: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 
 //font
 $font-family: "Josefin Sans", sans-serif;

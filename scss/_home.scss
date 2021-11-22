@@ -6,8 +6,147 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 4rem;
+  background: $first-gradient;
 }
 
-// @media screen and (min-width: 450px) {
+.logo {
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  img {
+    width: 28%;
+  }
+}
+
+.site-image {
+  background-image: url("../images/hero-desktop.jpg");
+  height: 300px;
+  width: 100%;
+  background-size: cover;
+  margin-bottom: 3rem;
+}
+
+.body-header {
+  text-align: center;
+  color: $Dark-Grayish-Red;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 1rem;
+  margin-bottom: 1.5rem;
+  span {
+    color: $Desaturated-Red;
+    font-weight: map-get($font-weight, small);
+  }
+}
+
+.body-article {
+  padding: 0 2rem;
+  margin-bottom: 1.8rem;
+
+  p {
+    text-align: center;
+    color: $Desaturated-Red;
+    font-weight: map-get($font-weight, medium);
+    line-height: 1.4rem;
+  }
+}
+.body-form {
+  padding: 0 2rem;
+  width: 100%;
+  position: relative;
+  input {
+    width: 90%;
+    height: 3rem;
+    border-radius: 3rem;
+    border: 1px solid $Dark-Grayish-Red;
+    color: $Dark-Grayish-Red;
+    border-color: $Dark-Grayish-Red;
+    background-color: inherit;
+  }
+  button {
+    position: absolute;
+    height: 3rem;
+    right: 10%;
+    width: 20%;
+    background-color: $Soft-Red;
+    border-radius: 3rem;
+    border: none;
+  }
+
+  button + img {
+    position: absolute;
+    right: 7rem;
+    top: 0.5rem;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.status {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+// @media screen and (min-width: 450px) and (max-width: 800px) {
 
 // }
+
+@media screen and (min-width: 800px) {
+  main {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      ". l l . s s s"
+      ". . . . s s s"
+      ". b b . s s s"
+      ". b b . s s s"
+      ". b b . s s s"
+      ". . . . s s s";
+  }
+
+  .logo {
+    grid-area: l;
+    padding: 0;
+    align-self: center;
+
+    img {
+      width: 35%;
+    }
+  }
+
+  .site-image {
+    grid-area: s;
+    background-image: url("../images/hero-desktop.jpg");
+    height: 100%;
+  }
+
+  .body {
+    grid-area: b;
+  }
+
+  .body-header {
+    text-align: left;
+    font-size: 1.6rem;
+  }
+
+  .body-article {
+    padding: 0;
+    p {
+      text-align: left;
+    }
+  }
+
+  .body-form {
+    padding: 0;
+
+    button img {
+      right: 8rem;
+    }
+  }
+}
